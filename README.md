@@ -1,0 +1,1 @@
+# lendico-code-challenge
