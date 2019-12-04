@@ -1,0 +1,24 @@
+{
+  "name": "lendico-code-challenge",
+  "version": "1.0.0",
+  "description": "A widget that calculated monthly installments based on amount & duration of loan.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lakshaya-Sood/lendico-code-challenge.git"
+  },
+  "keywords": [
+    "Vue JS",
+    "Typescript",
+    "Node JS"
+  ],
+  "author": "Lakshaya Sood",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lakshaya-Sood/lendico-code-challenge/issues"
+  },
+  "homepage": "https://github.com/Lakshaya-Sood/lendico-code-challenge#readme"
+}
