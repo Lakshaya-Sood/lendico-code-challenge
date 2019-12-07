@@ -6,14 +6,21 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "rest-server": "npm run build && babel --presets es2015 -d dist/server server && node dist/server"
   },
   "dependencies": {
+    "axios": "^0.19.0",
+    "babel-preset-es2015": "^6.24.1",
+    "bootstrap": "^4.4.1",
+    "bootstrap-vue": "^2.1.0",
     "core-js": "^3.4.3",
+    "express": "^4.17.1",
     "vue": "^2.6.10",
     "vue-class-component": "^7.0.2",
     "vue-property-decorator": "^8.3.0",
     "vue-router": "^3.1.3",
+    "vue-slider-component": "^3.0.44",
     "vuex": "^3.1.2"
   },
   "devDependencies": {
@@ -25,10 +32,11 @@
     "@vue/cli-plugin-unit-jest": "^4.1.0",
     "@vue/cli-plugin-vuex": "^4.1.0",
     "@vue/cli-service": "^4.1.0",
-    "@vue/eslint-config-airbnb": "^4.0.0",
     "@vue/eslint-config-typescript": "^4.0.0",
     "@vue/test-utils": "1.0.0-beta.29",
+    "babel-cli": "^6.26.0",
     "eslint": "^5.16.0",
+    "eslint-config-prettier": "^6.7.0",
     "eslint-plugin-vue": "^5.0.0",
     "node-sass": "^4.12.0",
     "sass-loader": "^8.0.0",
