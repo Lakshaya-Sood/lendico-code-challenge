@@ -1,5 +1,7 @@
 # lendico-code-challenge
 
+![App Screenshot](./docs/images/app.png)
+
 ## Project setup
 ```
 npm install
@@ -15,6 +17,7 @@ npm run rest-server
 npm run build
 ```
 
+![Unit Test Coverage Screenshot](./docs/images/coverage.png)
 ### Run your unit tests
 ```
 npm run test:unit
@@ -25,6 +28,7 @@ npm run test:unit
 npm run lint
 ```
 
+![Vue Project Manger Screenshot](./docs/images/vpm.png)
 ### Start Vue project Manager
 ```
 npm run vpm-start
