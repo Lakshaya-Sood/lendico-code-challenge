@@ -6,9 +6,9 @@
         :amountRange="this.amountRange"
         :yearsValue="this.years"
         :amountValue="this.amount"
-        :onYearChange="this.handleYearChange"
-        :onAmountChange="this.handleAmountChange"
-        :onSubmit="this.calculateMonthlyInstallment"
+        @onYearChange="this.handleYearChange"
+        @onAmountChange="this.handleAmountChange"
+        @onSubmit="this.calculateMonthlyInstallment"
       />
       <br />
       <show-result
@@ -21,14 +21,17 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import Vue from "vue";
+import { Prop, Component, Emit } from "vue-property-decorator";
 import { mapActions, mapGetters } from "vuex";
 
 import LoanCalculatorWidget from "../components/LoanCalculatorWidget.vue";
 import ShowResult from "../components/ShowResult.vue";
+
 import { __YearRange__, __AmountRange__ } from "../constants/HomeConstants";
 
-export default {
+@Component({
   name: "home",
   components: {
     LoanCalculatorWidget,
@@ -41,27 +44,47 @@ export default {
       "monthlyInstallment",
       "isCalculating",
       "error"
-    ]),
-    yearRange() {
-      return __YearRange__;
-    },
-    amountRange() {
-      return __AmountRange__;
-    }
+    ])
   },
   methods: {
-    ...mapActions(["onYearChange", "onAmountChange"]),
-    async calculateMonthlyInstallment() {
-      const isSuccess = await this.$store.dispatch(
-        "calculateMonthlyInstallment"
-      );
-    },
-    handleYearChange(value) {
-      this.$store.dispatch("onYearChange", value);
-    },
-    handleAmountChange(value) {
-      this.$store.dispatch("onAmountChange", value);
-    }
+    ...mapActions(["onYearChange", "onAmountChange"])
   }
-};
+})
+export default class Home extends Vue {
+  get yearRange() {
+    return __YearRange__;
+  }
+  get amountRange() {
+    return __AmountRange__;
+  }
+
+  @Emit("onSubmit")
+  async calculateMonthlyInstallment() {
+    const isSuccess = await this.$store.dispatch("calculateMonthlyInstallment");
+    isSuccess
+      ? this.$bvToast.toast("Calculated Successfully", {
+          title: "Calculate Monthly Installment",
+          variant: "success",
+          autoHideDelay: 1500,
+          solid: true
+        })
+      : this.$bvToast.toast("Server Error", {
+          title: "Calculate Monthly Installment",
+          variant: "danger",
+          autoHideDelay: 1500,
+          solid: true
+        });
+  }
+
+  @Emit("onYearChange")
+  handleYearChange(value: number): void {
+    this.$store.dispatch("onYearChange", value);
+  }
+
+  @Emit("onAmountChange")
+  handleAmountChange(value: number) {
+    this.$store.dispatch("onAmountChange", value);
+  }
+}
 </script>
+

@@ -23,7 +23,6 @@
         @change="this.onAmountChange"
         :state="isAmountValid"
         :value="this.amountValue"
-        v-money="money"
       ></b-form-input>
       <b-form-invalid-feedback id="invalid-feedback">Amount not in specified Range</b-form-invalid-feedback>
       <b-form-valid-feedback id="valid-feedback">Amount in specified Range</b-form-valid-feedback>
@@ -41,6 +40,7 @@ import Vue from "vue";
 import { Prop, Component } from "vue-property-decorator";
 import { NumericRange } from "../typings/components";
 
+const emptyfunc = () => {};
 @Component({
   name: "loan-calculator-widget",
   filters: {
@@ -57,9 +57,11 @@ export default class LoanCalculatorWidget extends Vue {
   @Prop({ required: true }) readonly amountRange!: NumericRange;
   @Prop({ required: true }) readonly yearsValue!: number;
   @Prop({ required: true }) readonly amountValue!: number;
-  @Prop({ required: true }) readonly onYearChange!: (value: number) => void;
-  @Prop({ required: true }) readonly onAmountChange!: (value: number) => void;
-  @Prop({ required: true }) readonly onSubmit!: () => void;
+  @Prop({ default: emptyfunc }) readonly onYearChange!: (value: number) => void;
+  @Prop({ default: emptyfunc }) readonly onAmountChange!: (
+    value: number
+  ) => void;
+  @Prop({ default: emptyfunc }) readonly onSubmit!: () => void;
 
   //computed
   get isAmountValid() {
@@ -69,16 +71,14 @@ export default class LoanCalculatorWidget extends Vue {
 
   //methods
   handleSubmit() {
-    if (this.isAmountValid) {
-      this.onSubmit();
-    } else {
-      this.$bvToast.toast("Please fill the correct values", {
-        title: `Form Submit`,
-        variant: "danger",
-        autoHideDelay: 1500,
-        solid: true
-      });
-    }
+    this.isAmountValid
+      ? this.$emit("onSubmit")
+      : this.$bvToast.toast("Please fill the correct values", {
+          title: `Form Submit`,
+          variant: "danger",
+          autoHideDelay: 1500,
+          solid: true
+        });
   }
 }
 </script>
