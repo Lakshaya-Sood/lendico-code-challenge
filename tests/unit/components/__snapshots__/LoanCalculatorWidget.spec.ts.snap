@@ -1,0 +1,205 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`loan-calculator-widget  component no changes as compared to last snapshot 1`] = `
+<div
+  class="card text-center"
+>
+  <!---->
+  <div
+    class="card-header"
+  >
+    <div>
+      Loan Calculator Widget
+    </div>
+  </div>
+  <div
+    class="card-body"
+  >
+    <!---->
+    <!---->
+    <div
+      class="card"
+    >
+      <!---->
+      <!---->
+      <div
+        class="card-body"
+      >
+        <!---->
+        <!---->
+        <h4>
+          Years
+        </h4>
+         
+        <div
+          class="vue-slider vue-slider-ltr"
+          style="padding: 10px 0px; width: auto; height: 4px;"
+        >
+          <div
+            class="vue-slider-rail"
+          >
+            <div
+              class="vue-slider-process"
+              style="height: 100%; top: 0px; left: 0%; width: 25%; transition-property: width,left; transition-duration: 0.5s;"
+            />
+            <div
+              class="vue-slider-marks"
+            >
+              <div
+                class="vue-slider-mark vue-slider-mark-active"
+                style="height: 100%; width: 4px; left: 0%;"
+              >
+                <div
+                  class="vue-slider-mark-step vue-slider-mark-step-active"
+                />
+                <div
+                  class="vue-slider-mark-label vue-slider-mark-label-active"
+                >
+                  1
+                </div>
+              </div>
+              <div
+                class="vue-slider-mark vue-slider-mark-active"
+                style="height: 100%; width: 4px; left: 25%;"
+              >
+                <div
+                  class="vue-slider-mark-step vue-slider-mark-step-active"
+                />
+                <div
+                  class="vue-slider-mark-label vue-slider-mark-label-active"
+                >
+                  2
+                </div>
+              </div>
+              <div
+                class="vue-slider-mark"
+                style="height: 100%; width: 4px; left: 50%;"
+              >
+                <div
+                  class="vue-slider-mark-step"
+                />
+                <div
+                  class="vue-slider-mark-label"
+                >
+                  3
+                </div>
+              </div>
+              <div
+                class="vue-slider-mark"
+                style="height: 100%; width: 4px; left: 75%;"
+              >
+                <div
+                  class="vue-slider-mark-step"
+                />
+                <div
+                  class="vue-slider-mark-label"
+                >
+                  4
+                </div>
+              </div>
+              <div
+                class="vue-slider-mark"
+                style="height: 100%; width: 4px; left: 100%;"
+              >
+                <div
+                  class="vue-slider-mark-step"
+                />
+                <div
+                  class="vue-slider-mark-label"
+                >
+                  5
+                </div>
+              </div>
+            </div>
+            <div
+              class="vue-slider-dot"
+              style="width: 20px; height: 20px; transform: translate(-50%, -50%); top: 50%; left: 25%; transition: left 0.5s;"
+            >
+              <div
+                class="vue-slider-dot-handle"
+              />
+              <div
+                class="vue-slider-dot-tooltip vue-slider-dot-tooltip-top"
+              >
+                <div
+                  class="vue-slider-dot-tooltip-inner vue-slider-dot-tooltip-inner-top"
+                >
+                  <span
+                    class="vue-slider-dot-tooltip-text"
+                  >
+                    2
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+         
+        <br />
+      </div>
+      <!---->
+      <!---->
+    </div>
+     
+    <br />
+     
+    <div
+      class="card"
+    >
+      <!---->
+      <!---->
+      <div
+        class="card-body"
+      >
+        <!---->
+        <!---->
+        <h4>
+          Amount in €
+        </h4>
+         
+        <input
+          aria-describedby="input-live-help valid-feedback invalid-feedback"
+          class="form-control is-valid"
+          id="input-live"
+          placeholder="Enter Amount"
+          type="number"
+        />
+         
+        <div
+          class="invalid-feedback"
+          id="invalid-feedback"
+        >
+          Amount not in specified Range
+        </div>
+         
+        <div
+          class="valid-feedback"
+          id="valid-feedback"
+        >
+          Amount in specified Range
+        </div>
+         
+        <small
+          class="form-text text-muted"
+          id="input-live-help"
+        >
+          Enter amount between €10 - €100
+        </small>
+      </div>
+      <!---->
+      <!---->
+    </div>
+     
+    <br />
+     
+    <button
+      class="btn btn-dark btn-lg rounded-pill"
+      type="button"
+    >
+      Calculate
+    </button>
+  </div>
+  <!---->
+  <!---->
+</div>
+`;

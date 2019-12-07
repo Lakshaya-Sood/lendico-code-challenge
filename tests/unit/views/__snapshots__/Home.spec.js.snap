@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`home component no changes as compared to last snapshot 1`] = `
+<div
+  class="home"
+>
+  <b-card-stub
+    bodytag="div"
+    class="widget"
+    footertag="div"
+    headertag="div"
+    subtitle=""
+    subtitletag="h6"
+    subtitletextvariant="muted"
+    tag="div"
+    title=""
+    titletag="h4"
+  >
+    <loan-calculator-widget-stub
+      amountrange="[object Object]"
+      amountvalue="100"
+      yearrange="[object Object]"
+      yearsvalue="1"
+    />
+     
+    <br />
+     
+    <show-result-stub
+      description="Monthly installment:"
+      failmessage="Compute Again!!!"
+    />
+  </b-card-stub>
+</div>
+`;

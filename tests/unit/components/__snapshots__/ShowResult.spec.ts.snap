@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`show-result component no changes as compared to last snapshot 1`] = `
+<b-card-stub
+  align="center"
+  bodytag="div"
+  footertag="div"
+  headertag="div"
+  subtitle=""
+  subtitletag="h6"
+  subtitletextvariant="muted"
+  tag="div"
+  title=""
+  titletag="h4"
+>
+  <div>
+    <h2>
+      
+      Some Discription
+      
+      <span
+        style="color: black;"
+      >
+        3456.12
+      </span>
+    </h2>
+  </div>
+</b-card-stub>
+`;
