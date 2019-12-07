@@ -63,7 +63,10 @@
   "keywords": [
     "Vue JS",
     "Typescript",
-    "Node JS"
+    "Node JS",
+    "Jest",
+    "Storybook",
+    "Vue Project Manger"
   ],
   "author": "Lakshaya Sood",
   "license": "ISC",
