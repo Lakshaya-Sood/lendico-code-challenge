@@ -34,6 +34,7 @@ npm run lint
 npm run vpm-start
 ```
 
+![Storybook Screenshot](./docs/images/storybook.png)
 ### Start storybook
 ```
 npm run storybook
