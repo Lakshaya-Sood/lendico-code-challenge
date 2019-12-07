@@ -40,5 +40,11 @@ npm run vpm-start
 npm run storybook
 ```
 
+![FE Codebase Documentaion Screenshot](./docs/images/code_documentation.png)
+### See FE Documentation
+```
+Open file <root>/docs/code/index.html  in Web  Browser
+```
+
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
